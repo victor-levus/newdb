@@ -43,10 +43,7 @@ class Customer(models.Model):
     membership = models.CharField(max_length=1, choices=MEMBERSHIP_CHOICES, default=MEMBERSHIP_BRONZE)
 
     class Meta:
-        db_table = 'e_commerce_customers'
-        indexes = [
-            models.Index(fields=['last_name', 'first_name'])
-        ]
+        db_table = 'e_commerce_customer'
 
 class Order(models.Model):
     PAYMENT_STATUS_PENDING = 'P'
@@ -72,7 +69,6 @@ class OrderItem(models.Model):
 class Address(models.Model):
     street = models.CharField(max_length=255)
     city = models.CharField(max_length=255)
-    customer = models.OneToOneField(Customer, on_delete=models.CASCADE)
     customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
 
 
