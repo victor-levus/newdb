@@ -1,2 +1,2 @@
 release: python manage.py migrate
-web: python server.py
+web: waitress-serve database.wsgi:application
