@@ -1,5 +1,4 @@
 from pprint import pp, pprint
-from tkinter import S
 from django.http import HttpResponse
 from django.shortcuts import render
 from requests import Response
