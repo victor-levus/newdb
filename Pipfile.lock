@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "98c297eb5f6420f119df5e5ca85a714d83c1afac7f5913a5453b710f4de7559f"
+            "sha256": "bf29160b81366765c9dba7e30388ce0996d7051bc130fcc8dc7a6a3a67171689"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -242,6 +242,12 @@
             "index": "pypi",
             "version": "==0.93.4"
         },
+        "engineering-notation": {
+            "hashes": [
+                "sha256:3efc4bdb7d8a4f881176d3cb6f17194b02733aa8c9b0f8cb4347b423bd73a9b6"
+            ],
+            "version": "==0.7.0"
+        },
         "gunicorn": {
             "hashes": [
                 "sha256:9dcc4547dbb1cb284accfb15ab5667a0e5d1881cc443e0677b4882a4067a807e",
@@ -441,7 +447,7 @@
                 "sha256:7c5599b102feddaa661c826c56ab4fee28bfd17f5abca1ebbe3e7f19d7c97983",
                 "sha256:8fefa2a1a1365bf5520aac41836fbee479da67864514bdb821f31ce07ce65349"
             ],
-            "markers": "python_version >= '3.7' and python_version < '4'",
+            "markers": "python_version >= '3.7' and python_full_version < '4.0.0'",
             "version": "==2.28.1"
         },
         "requests-oauthlib": {
@@ -491,6 +497,13 @@
             ],
             "markers": "python_version >= '3.5'",
             "version": "==0.4.3"
+        },
+        "tk-tools": {
+            "hashes": [
+                "sha256:3c1e343e02cbc7769fe8b36bf3ad04a47cf593936f87274a2fc99de7c20bdd5c"
+            ],
+            "index": "pypi",
+            "version": "==0.16.0"
         },
         "tzdata": {
             "hashes": [

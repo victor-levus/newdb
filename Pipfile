@@ -17,6 +17,7 @@ gunicorn = "*"
 waitress = "*"
 dj-database-url = "*"
 django-debug-toolbar = "*"
+tk-tools = "*"
 
 [dev-packages]
 
