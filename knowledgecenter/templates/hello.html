@@ -7,5 +7,13 @@
   </head>
   <body>
     <h1>Hello World {{ name }}</h1>
+    <ul>
+      {% for product in products %}
+      <li>
+        {{ product.title}} - ${{ product.price}} - {{ product.collection.title}}
+      </li>
+      ---------------------------------------------------------------------------
+      {% endfor%}
+    </ul>
   </body>
 </html>

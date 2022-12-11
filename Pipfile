@@ -5,6 +5,16 @@ name = "pypi"
 
 [packages]
 django = "*"
+mysqlclient = "*"
+djangorestframework = "*"
+drf-nested-routers = "*"
+django-filter = "*"
+djoser = "*"
+django-cors-headers = "*"
+pillow = "*"
+whitenoise = "*"
+gunicorn = "*"
+waitress = "*"
 
 [dev-packages]
 
