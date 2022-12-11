@@ -16,6 +16,7 @@ whitenoise = "*"
 gunicorn = "*"
 waitress = "*"
 dj-database-url = "*"
+django-debug-toolbar = "*"
 
 [dev-packages]
 
