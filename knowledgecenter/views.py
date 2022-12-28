@@ -1,7 +1,4 @@
-from pprint import pp, pprint
-from django.http import HttpResponse
-from django.shortcuts import render
-from requests import Response
+
 from rest_framework.viewsets import ModelViewSet, GenericViewSet
 from rest_framework.permissions import IsAuthenticated
 
