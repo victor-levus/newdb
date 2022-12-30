@@ -11,6 +11,8 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['levus-training.herokuapp.com']
 
+CSRF_TRUSTED_ORIGINS = ['https://levus-training.herokuapp.com']
+
 DATABASES = {
     'default': dj_database_url.config()
 }
