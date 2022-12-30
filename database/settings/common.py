@@ -72,6 +72,8 @@ CORS_ALLOWED_ORIGINS = [
     "https://learning-levus.herokuapp.com"
 ]
 
+CSRF_TRUSTED_ORIGINS = ['https://levus-training.herokuapp.com/']
+
 ROOT_URLCONF = 'database.urls'
 
 TEMPLATES = [
