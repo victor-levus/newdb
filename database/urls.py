@@ -25,7 +25,7 @@ admin.site.index_title = 'Admin'
 urlpatterns = [
     path('', include('core.urls')),
     path('admin/', admin.site.urls),
-    path('knowledgecenter/', include('knowledgecenter.urls')),
+    path('betcodes/', include('betcodes.urls')),
     path('training/', include('training.urls')),
     path('auth/', include('djoser.urls')),
     path('auth/', include('djoser.urls.jwt')),

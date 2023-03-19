@@ -11,8 +11,8 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['levus-training.herokuapp.com']
 
-CSRF_TRUSTED_ORIGINS = ['https://levus-training.herokuapp.com', "http://localhost:3000",
-    "http://127.0.0.1:3000" ]
+# CSRF_TRUSTED_ORIGINS = ['https://levus-training.herokuapp.com', "http://localhost:3000",
+#     "http://127.0.0.1:3000" ]
 
 DATABASES = {
     'default': dj_database_url.config()
