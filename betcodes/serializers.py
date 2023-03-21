@@ -9,7 +9,7 @@ class BetCodeSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = BetCode
-        fields = ['id', 'home_team', 'away_team', 'bet', 'ht_home_score', 'ht_away_score', 'ft_home_score', 'ft_away_score', 'remark', 'match_time']
+        fields = ['id', 'home_team', 'away_team', 'bet', 'odd', 'ht_home_score', 'ht_away_score', 'ft_home_score', 'ft_away_score', 'remark', 'match_time']
 
 
 class CommentSerializer(serializers.ModelSerializer):
