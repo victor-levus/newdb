@@ -18,6 +18,7 @@ class BetCode(models.Model):
     home_team = models.CharField(max_length=255)
     away_team = models.CharField(max_length=255)
     bet = models.CharField(max_length=255)
+    odd = models.DecimalField(max_digits=6, decimal_places=2)
     ht_home_score = models.IntegerField(null=True, blank=True)
     ht_away_score = models.IntegerField(null=True, blank=True)
     ft_home_score = models.IntegerField(null=True, blank=True)

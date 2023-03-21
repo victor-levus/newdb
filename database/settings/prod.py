@@ -11,7 +11,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['super-mart2.herokuapp.com']
 
-CSRF_TRUSTED_ORIGINS = ['https://super-mart2.herokuapp.com']
+CSRF_TRUSTED_ORIGINS = ['https://super-mart2.herokuapp.com', 'https://localhost:3000']
 
 DATABASES = {
     'default': dj_database_url.config()
