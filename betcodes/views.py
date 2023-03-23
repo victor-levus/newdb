@@ -3,8 +3,8 @@ from rest_framework.viewsets import ModelViewSet
 from rest_framework.permissions import SAFE_METHODS, AllowAny, IsAdminUser, IsAuthenticated
 import logging
 
-from betcodes.models import BetCode, FootballClub, Likes, Post, Comment
-from betcodes.serializers import BetCodeSerializer, FootballClubSerializer, LikeSerializer, PostSerializer, CommentSerializer
+from betcodes.models import BetCode, FootballClub, BookCodeInfo, Likes, Post, Comment
+from betcodes.serializers import BetCodeSerializer, FootballClubSerializer, BookCodeInfoSerializer, LikeSerializer, PostSerializer, CommentSerializer
 
 
 logger = logging.getLogger(__name__)
@@ -13,6 +13,16 @@ logger = logging.getLogger(__name__)
 class BetCodeViewSet(ModelViewSet):
     queryset = BetCode.objects.all()
     serializer_class = BetCodeSerializer
+
+    def get_permissions(self):
+        if self.request.method in SAFE_METHODS:
+            return [AllowAny()]
+        return [IsAdminUser()]
+
+
+class BookCodeInfoViewSet(ModelViewSet):
+    queryset = BookCodeInfo.objects.all()
+    serializer_class = BookCodeInfoSerializer
 
     def get_permissions(self):
         if self.request.method in SAFE_METHODS:

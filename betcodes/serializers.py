@@ -2,7 +2,7 @@
 from email.policy import default
 from rest_framework import serializers
 
-from betcodes.models import BetCode, FootballClub, Likes, Post, Comment
+from betcodes.models import BetCode, FootballClub, BookCodeInfo, Likes, Post, Comment
 
 
 class BetCodeSerializer(serializers.ModelSerializer):
@@ -10,6 +10,12 @@ class BetCodeSerializer(serializers.ModelSerializer):
     class Meta:
         model = BetCode
         fields = ['id', 'home_team', 'away_team', 'bet', 'odd', 'ht_home_score', 'ht_away_score', 'ft_home_score', 'ft_away_score', 'remark', 'match_time']
+
+
+class BookCodeInfoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = BookCodeInfo
+        fields = ['book_code', 'total_odd', 'ticket_date']
 
 
 class CommentSerializer(serializers.ModelSerializer):

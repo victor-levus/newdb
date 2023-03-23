@@ -28,6 +28,12 @@ class BetCode(models.Model):
     placed_at = models.DateTimeField(auto_now=True)
 
 
+class BookCodeInfo(models.Model):
+    book_code = models.CharField(max_length=255)
+    total_odd = models.DecimalField(max_digits=6, decimal_places=2)
+    ticket_time = models.DateTimeField()
+    placed_at = models.DateTimeField(auto_now=True)
+
 
 class Post(models.Model):
     description = models.TextField()
