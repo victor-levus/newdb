@@ -17,6 +17,10 @@ class FootballClubAdmin(admin.ModelAdmin):
 class BetCodeAdmin(admin.ModelAdmin):
     list_display = ['id', 'home_team', 'away_team', 'bet', 'ht_home_score', 'ht_away_score', 'ft_home_score', 'ft_away_score', 'remark', 'match_time']
 
+@admin.register(models.BookCodeInfo)
+class BookCodeInfoAdmin(admin.ModelAdmin):
+    list_display = ['book_code', 'total_odd', 'ticket_date']
+
 @admin.register(models.Post)
 class PostAdmin(admin.ModelAdmin):
     list_display = ['id', 'description', 'placed_at', 'user']
