@@ -70,7 +70,8 @@ CORS_ALLOWED_ORIGINS = [
     "http://192.168.0.153:3000",
     "https://levus-training.herokuapp.com",
     "http://levus-training.herokuapp.com",
-    "https://learning-levus.herokuapp.com"
+    "https://learning-levus.herokuapp.com",
+    "https://betcodes.herokuapp.com"
 ]
 
 ROOT_URLCONF = 'database.urls'
