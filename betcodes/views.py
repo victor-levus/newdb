@@ -43,7 +43,6 @@ class PostViewSet(ModelViewSet):
 
 
 class ProfilePostViewSet(ModelViewSet):
-    # queryset = Post.objects.prefetch_related('user', 'comments').all()
     serializer_class = PostSerializer
     permission_classes = [IsAuthenticated]
 
