@@ -47,7 +47,6 @@ class ProfilePostViewSet(ModelViewSet):
     permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
-        # logger(self)
         return Post.objects.prefetch_related('user', 'comments').filter(user_id=self.request.user.id)
 
     def get_serializer_context(self):
