@@ -8,17 +8,16 @@ SECRET_KEY = 'django-insecure-09$^3526099-7d25k*j!c9r6i^c45j9+19^kss3c$t_o1q3-e!
 DEBUG = True
 
 
-
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'backend',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'my_database',
         'HOST': 'localhost',
-        'USER': 'root',
-        'PASSWORD': 'Agtm2486'
-        
+        'USER': 'levus',
+        'PASSWORD': 'root'
+
     }
 }
