@@ -10,10 +10,11 @@ DEBUG = True
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
+# _psycopg2
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'my_database',
         'HOST': 'localhost',
         'USER': 'levus',
