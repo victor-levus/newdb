@@ -4,7 +4,7 @@
     {
       "src": "database/wsgi.py",
       "use": "@vercel/python",
-      "config": { "maxLambaSize": "15mb", "runtime": "python3.10" }
+      "config": { "maxLambaSize": "15mb", "runtime": "python3.9" }
     },
     {
       "src": "build_files.sh",
