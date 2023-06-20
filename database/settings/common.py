@@ -92,7 +92,8 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'database.wsgi.application'
+# WSGI_APPLICATION = 'database.wsgi.application'
+WSGI_APPLICATION = 'vercel_app.wsgi.app'
 
 
 # Password validation

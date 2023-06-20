@@ -10,7 +10,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 DEBUG = False
 
 
-ALLOWED_HOSTS = ['super-mart2.herokuapp.com', '.vercel.app/']
+ALLOWED_HOSTS = ['super-mart2.herokuapp.com', '.vercel.app']
 
 CSRF_TRUSTED_ORIGINS = ['https://super-mart2.herokuapp.com',
                         'https://localhost:3000', 'https://betcodes-fe.vercel.app/']
