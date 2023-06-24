@@ -27,7 +27,7 @@ class BookCodeInfoViewSet(ModelViewSet):
     def get_permissions(self):
         if self.request.method in SAFE_METHODS:
             return [AllowAny()]
-        return [IsAdminUser()]     
+        return [IsAdminUser()]
 
 
 class PostViewSet(ModelViewSet):
@@ -53,7 +53,7 @@ class ProfilePostViewSet(ModelViewSet):
         context = super().get_serializer_context()
         context['user_id'] = self.request.user
         logger.info('self.kwargs2')
-        return context        
+        return context
 
 
 class CommentViewSet(ModelViewSet):
@@ -76,9 +76,7 @@ class LikesViewSet(ModelViewSet):
         return {'post_id': self.kwargs['post_pk'], 'user_id': self.request.user}
 
 
-
 class FootballClubViewSet(ModelViewSet):
     queryset = FootballClub.objects.all()
     serializer_class = FootballClubSerializer
     permission_classes = [IsAdminUser]
-
