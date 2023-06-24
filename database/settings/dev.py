@@ -14,11 +14,11 @@ DEBUG = True
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'my_database',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'betcodes',
         'HOST': 'localhost',
-        'USER': 'levus',
-        'PASSWORD': 'root'
+        'USER': 'root',
+        'PASSWORD': 'Agtm2486'
 
     }
 }
