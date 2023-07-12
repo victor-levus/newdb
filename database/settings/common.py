@@ -163,6 +163,3 @@ DJOSER = {
 
 
 AUTH_USER_MODEL = 'core.User'
-
-STATICFILES_DIR = os.path.join(BASE_DIR, 'static'),
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
