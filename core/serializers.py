@@ -5,12 +5,14 @@ from rest_framework_simplejwt.views import TokenObtainPairView
 
 class UserCreateSerializer(BaseUserCreateSerializer):
     class Meta(BaseUserCreateSerializer.Meta):
-        fields = ['id', 'username', 'password', 'email', 'first_name', 'last_name']
+        fields = ['id', 'username', 'password',
+                  'email', 'first_name', 'last_name', 'phone']
 
 
 class UserSerializer(BaseUserSerializer):
     class Meta(BaseUserSerializer.Meta):
-        fields = ['id', 'username', 'email', 'first_name', 'last_name']
+        fields = ['id', 'username', 'email',
+                  'first_name', 'last_name', 'phone']
 
 
 # class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
@@ -24,7 +26,7 @@ class UserSerializer(BaseUserSerializer):
 #         # ...
 
 #         return token
-    
+
 
 # class MyTokenObtainPairView(TokenObtainPairView):
 #     """
