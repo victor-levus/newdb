@@ -51,7 +51,6 @@ class CommentSerializer(serializers.ModelSerializer):
 
 class PostSerializer(serializers.ModelSerializer):
     comments = CommentSerializer(many=True, read_only=True)
-    likes = LikeSerializer(many=True, read_only=True)
     user = serializers.CharField(read_only=True)
 
     def create(self, validated_data):
@@ -60,7 +59,7 @@ class PostSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Post
-        fields = ['id', 'user', 'description', 'placed_at', 'comments', 'likes']
+        fields = ['id', 'user', 'description', 'placed_at', 'comments']
 
 
 class FootballClubSerializer(serializers.ModelSerializer):
