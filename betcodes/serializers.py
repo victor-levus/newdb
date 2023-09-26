@@ -43,7 +43,7 @@ class CommentSerializer(serializers.ModelSerializer):
 #         verify_like = Likes.objects.filter(user_id=user_id.id)
 
 #         if (verify_like):
-#             return NULL
+#             return
 #         else:
 #             return Likes.objects.create(post_id=post_id, user_id=user_id.id, **validated_data)
 
