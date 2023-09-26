@@ -14,7 +14,7 @@ router.register('bookcodeinfo', views.BookCodeInfoViewSet)
 
 posts_router = routers.NestedDefaultRouter(router, 'posts', lookup='post')
 posts_router.register('comments', views.CommentViewSet, basename='post-comments')
-posts_router.register('likes', views.LikesViewSet, basename='post-likes')
+# posts_router.register('likes', views.LikesViewSet, basename='post-likes')
 
 
 # URLConf
