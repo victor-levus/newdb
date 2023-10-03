@@ -1,5 +1,4 @@
-from email.policy import default
-from multiprocessing import managers
+
 from django.conf import settings
 from django.db import models
 
@@ -25,40 +24,38 @@ class BetCode(models.Model):
     ft_away_score = models.IntegerField(null=True, blank=True)
     remark = models.BooleanField()
     match_time = models.DateTimeField(null=True)
-    placed_at = models.DateTimeField(auto_now=True)
+    placed_at = models.DateTimeField(auto_now_add=True)
 
 
 class BookCodeInfo(models.Model):
     book_code = models.CharField(max_length=255)
     total_odd = models.DecimalField(max_digits=6, decimal_places=2)
     ticket_date = models.DateTimeField()
-    placed_at = models.DateTimeField(auto_now=True)
+    placed_at = models.DateTimeField(auto_now_add=True)
 
 
 class Post(models.Model):
     description = models.TextField()
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL,
+                             on_delete=models.CASCADE)
     # image = models.ImageField(null=True, blank=True)
     placed_at = models.DateTimeField(auto_now_add=True)
 
 
 class Comment(models.Model):
-    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments')
+    post = models.ForeignKey(
+        Post, on_delete=models.CASCADE, related_name='comments')
     name = models.CharField(max_length=255, null=True, blank=True)
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL,
+                             on_delete=models.CASCADE)
     description = models.TextField()
     placed_at = models.DateTimeField(auto_now_add=True)
 
 
 class Likes(models.Model):
-    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='likes')
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    post = models.ForeignKey(
+        Post, on_delete=models.CASCADE, related_name='likes')
+    user = models.ForeignKey(settings.AUTH_USER_MODEL,
+                             on_delete=models.CASCADE)
     likes = models.BooleanField(default=False)
     placed_at = models.DateTimeField(auto_now_add=True)
-
-
-
-    
-
-
-

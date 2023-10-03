@@ -18,6 +18,10 @@ waitress = "*"
 dj-database-url = "*"
 django-debug-toolbar = "*"
 tk-tools = "*"
+psycopg2 = "*"
+psycopg = "*"
+sqlalchemy = "*"
+pandas = "*"
 
 [dev-packages]
 

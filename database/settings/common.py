@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'training',
     'core',
     'betcodes',
+    'superMart'
 ]
 
 MIDDLEWARE = [
@@ -70,7 +71,9 @@ CORS_ALLOWED_ORIGINS = [
     "https://levus-training.herokuapp.com",
     "http://levus-training.herokuapp.com",
     "https://learning-levus.herokuapp.com",
-    "https://betcodes.herokuapp.com"
+    "https://betcodes.herokuapp.com",
+    "https://betcodes.space",
+    "http://betcodes.space"
 ]
 
 ROOT_URLCONF = 'database.urls'
@@ -118,7 +121,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'Etc/GMT+1'
+TIME_ZONE = 'Etc/GMT-1'
 
 USE_I18N = True
 

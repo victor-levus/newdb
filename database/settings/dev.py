@@ -14,7 +14,7 @@ DEBUG = True
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'my_database',
         'HOST': 'localhost',
         'USER': 'postgres',
@@ -22,3 +22,14 @@ DATABASES = {
 
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'betcodes',
+#         'HOST': 'localhost',
+#         'USER': 'root',
+#         'PASSWORD': 'Agtm2486'
+
+#     }
+# }
