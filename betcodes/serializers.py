@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from betcodes.models import BetCode, FootballClub, BookCodeInfo, Likes, Post, Comment
+from betcodes.models import BetCode, FootballClub, BookCodeInfo, Post, Comment
 
 
 class BetCodeSerializer(serializers.ModelSerializer):
@@ -33,24 +33,23 @@ class CommentSerializer(serializers.ModelSerializer):
 class LikeSerializer(serializers.ModelSerializer):
     user = serializers.CharField(read_only=True)
 
-    class Meta:
-        model = Likes
-        fields = ['id', 'user', 'likes', 'placed_at']
+#     class Meta:
+#         model = Likes
+#         fields = ['id', 'user', 'likes', 'placed_at']
 
-    def create(self, validated_data):
-        post_id = self.context['post_id']
-        user_id = self.context['user_id']
-        verify_like = Likes.objects.filter(user_id=user_id.id)
+#     def create(self, validated_data):
+#         post_id = self.context['post_id']
+#         user_id = self.context['user_id']
+#         verify_like = Likes.objects.filter(user_id=user_id.id)
 
-        if (verify_like):
-            return
-        else:
-            return Likes.objects.create(post_id=post_id, user_id=user_id.id, **validated_data)
+    # if (verify_like):
+    #     return
+    # else:
+    #     return Likes.objects.create(post_id=post_id, user_id=user_id.id, **validated_data)
 
 
 class PostSerializer(serializers.ModelSerializer):
     comments = CommentSerializer(many=True, read_only=True)
-    likes = LikeSerializer(many=True, read_only=True)
     user = serializers.CharField(read_only=True)
 
     def create(self, validated_data):
@@ -59,8 +58,7 @@ class PostSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Post
-        fields = ['id', 'user', 'description',
-                  'placed_at', 'comments', 'likes']
+        fields = ['id', 'user', 'description', 'placed_at', 'comments']
 
 
 class FootballClubSerializer(serializers.ModelSerializer):
